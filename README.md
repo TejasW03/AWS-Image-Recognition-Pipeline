@@ -15,6 +15,8 @@ This system uses the following AWS services:
 
 ### Workflow:
 
+![Workflow](https://github.com/TejasW03/AWS-Image-Recognition-Pipeline/blob/main/images/workflow.PNG?raw=true)
+
 1. **EC2 A** downloads images from an S3 bucket and uses Rekognition to detect cars.
 2. If a car is found (with >90% confidence), the image index is sent to **SQS**.
 3. **EC2 B** reads from the SQS queue and performs text recognition on those images.
